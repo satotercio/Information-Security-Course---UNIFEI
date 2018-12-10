@@ -1,0 +1,14 @@
+[HDP-3.0.1.0]
+name=HDP-3.0.1.0
+baseurl=http://hdp.unifei.local/HDP/centos7
+gpgcheck=0
+enabled=1
+priority=1
+
+
+[HDP-UTILS-1.1.0.22]
+name=HDP-UTILS-1.1.0.22
+baseurl=http://hdp.unifei.local/HDP-UTILS-1.1.0.22/repos/centos7
+gpgcheck=0
+enabled=1
+priority=1
