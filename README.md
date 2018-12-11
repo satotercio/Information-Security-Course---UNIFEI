@@ -13,9 +13,9 @@ Equipe:
          
          
 # Programas        
-Oracle Virtual Box 5.2
-CentOS 7
-Cliente, Servidor e KDC Kerberos
+* Oracle Virtual Box 5.2
+* CentOS 7
+* Cliente, Servidor e KDC Kerberos
 
 # Instalação
 
