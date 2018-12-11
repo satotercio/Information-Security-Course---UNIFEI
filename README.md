@@ -18,9 +18,9 @@ Em um cluster de produção real, pode-se ter uma máquina dedicada para hospeda
 
 Precisa-se do cliente e dos utilitários do Kerberos em todas as máquinas do cluster.
 Para instalá-lo usamos o comando abaixo:
-
-<style color = 'red'> yum install krb5-workstation krb5-libs krb5-auth-dialog </style>
-
+```
+ yum install krb5-workstation krb5-libs krb5-auth-dialog 
+```
 
 ## 2) Instalar o Kerberos server em apenas uma máquinas:
 
