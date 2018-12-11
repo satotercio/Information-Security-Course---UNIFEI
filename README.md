@@ -76,8 +76,8 @@ Então, criamos uma entrada para meu domínio e substituimos esses valores pelo 
 [realms]
 
 UNIFEI.LOCAL = {
-     Kdc = hdp.unifei.local  // MUDAR PARA ALGUMA OUTRA COISA
-     admin_server = hdp.unifei.local  // MUDAR PARA ALGUMA OUTRA COISA
+     Kdc = hdp.unifei.local  
+     admin_server = hdp.unifei.local  
 }
 ```
 Para o segundo traduzimos um nome de host para um nome de domínio. Essa entrada diz quais máquinas fazem parte desse domínio.
