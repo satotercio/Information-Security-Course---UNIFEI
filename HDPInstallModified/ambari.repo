@@ -1,6 +1,0 @@
-[Ambari-2.7.1.0]
-name=Ambari-2.7.1.0
-baseurl=http://hdp.unifei.local/AMBARI-2.7.1.0/centos7/2.7.1.0-136
-gpgcheck=0
-enabled=1
-priority=1
