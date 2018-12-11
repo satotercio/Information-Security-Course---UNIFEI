@@ -48,8 +48,10 @@ Posteriormente, usamos o kdc.conf para definir um domínio. Vamos fazer isso pel
 vi /var/kerberos/krb5kdc/kdc.conf
 ```
 A primeira seção [kdcdefaults] é para alguns números de porta. Nós deixamos como está.
-A segunda seção [realms] é onde define-se os domínimos. Já é dado um exemplo de entrada ao executar esse comando mas mudamos para algum nome significativo. Pode-se dar qualquer nome que se deseja, desde que o tenha alguma relação com o nome do cluster, como “UNIFEI.LOCAL”.
-
+A segunda seção [realms] é onde define-se os domínimos. Já é dado um exemplo de entrada ao executar esse comando mas mudamos para algum nome significativo. Pode-se dar qualquer nome que se deseja, desde que o tenha alguma relação com o nome do cluster, como 
+```
+“UNIFEI.LOCAL”.
+```
 Um domínio deve ter configurações, incluindo a localização do KDC na rede e os algoritmos de criptografia suportados. As outras configurações que são geradas automaticamente são para definir alguns valores padrões e não alteramos eles.
 
 A segunda parte da configuração do Realm reside no próximo arquivo de configuração.
@@ -61,8 +63,10 @@ vi /var/kerberos/krb5kdc/kdc.conf
 vi /etc/krb5.conf
 ```
 Nós mudamos o nome do domínio padrão e fazemos o nosso domínio como padrão pelo nome “UNIFEI.LOCAL”.
-A próxima configuração é muito crítica. Especificamos o local do servidor Kerberos que o domínio estará usando. Alterando a linha “kdc = kerberos.example.com”.
-
+A próxima configuração é muito crítica. Especificamos o local do servidor Kerberos que o domínio estará usando. Alterando a linha 
+```
+“kdc = kerberos.example.com”.
+```
 Então, criamos uma entrada para meu domínio e substituimos esses valores pelo nome do host do meu servidor KDC:
 ```
 [realms]
@@ -94,9 +98,10 @@ A Principal no Kerberos é composto de três componentes. Por exemplo:
 1. Primary
 2. Instance
 3. Realm
+```
 root/admin@HDPCLUSTER.LOCAL
 root@HDPCLUSTER.LOCAL
-
+```
 O root é a principal. Admin é a instância, e supõe que  já se conhece o domínio.
 A parte Instance é opcional, mas o root e root / admin são as duas principais diferenças para o Kerberos.
 
