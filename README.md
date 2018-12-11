@@ -150,5 +150,25 @@ E caso queira remover os tickets criados, usa-se o comando kdestroy.
 
 ![](CentOSNormal.gif)
 
+# Nota
+
+## Feedback
+Faltou detalhar caso de uso.
+
+Critérios 
+1. README [3]
+  * Detalhamento - 0.6
+  * Informações do caso de uso escolhido - 0.5
+  * Informações da configuração - 1
+2. Commits [3] - 2.8 - Muito bom, com participaçao dos outros membros. 
+3. .gitignore [1] - 0
+4. Código [3] - 2.3
+5. Pontos extras
+  * Extras (POC, GIF, Video, esforço) - 1
+  * Organização - 0.3
+
+Total = 8.5
+(Não é necessariamente a nota final)
+
 
 
