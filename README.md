@@ -18,7 +18,7 @@ Em um cluster de produção real, pode-se ter uma máquina dedicada para hospeda
 
 # Instalação
 
-## 1) Instalação e configuração do Kerberos:
+## 1) Instalação e configuração do Kerberos
 
 Precisa-se do cliente e dos utilitários do Kerberos em todas as máquinas do cluster.
 Para instalá-lo usamos o comando abaixo:
@@ -26,7 +26,7 @@ Para instalá-lo usamos o comando abaixo:
  yum install krb5-workstation krb5-libs krb5-auth-dialog 
 ```
 
-## 2) Instalar o Kerberos server em apenas uma máquinas:
+## 2) Instalar o Kerberos server em apenas uma máquina
 
 Agora cria-se um servidor Kerberos.
 Como estamos realizamos em um cluster de nó único, instalamos o servidor Kerberos na mesma máquina.
@@ -37,7 +37,7 @@ yum install krb5-server
 É necessário que o client já esteja instalado na máquina.
 
 
-## 3) Configurar o Kerberos.
+## 3) Configurar o Kerberos
 
 Existem dois arquivos de configuração:
 ```
@@ -95,7 +95,7 @@ Usamos o seguinte comando:
 ```
 kdb5_util create –r HDPUNIFEI.LOCAL –s
 ```
-Esse comando solicitará uma senha mestre para o datebase.
+Esse comando solicitará uma senha mestre para o database.
 O Kerberos criptografa o database usando essa senha mestre. Para restaurar o KDC database de um backup ou reinicie o database, precisa-se dessa senha. Não há problema em digitar a senha no momento do database na restauração. Mas fornecer essa senha em cada reinicialização é um problema. Para evitá-lo, criamos o banco de dados usamos a opção –s no comando citado acima. A opção -s criará um arquivo stash para armazenar a senha. O KDC usará automaticamente a senha do arquivo stash em cada reinicialização. O database do Kerberos mantém identidades. Em seguida, ele atribui tickets para essas identidades. Na terminologia do Kerberos, isso é chamamos de Principal.
 
 A Principal no Kerberos é composto de três componentes. Por exemplo:
