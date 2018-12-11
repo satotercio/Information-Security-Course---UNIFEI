@@ -145,5 +145,9 @@ E caso queria remover os kitckets criados usa-se o comando kdestroy.
 
 Pode-se usar o assistente Ambari Kerberos para ativar o Kerberos no cluster.
 
+# Simulação
+
+<a href="https://imgflip.com/gif/2oo58a"><img src="https://i.imgflip.com/2oo58a.gif" title="made at imgflip.com"/></a>
+
 
 
