@@ -8,7 +8,7 @@ Equipe:  Tercio Naoki Sato 30697
          Felipe Silva de Paula 35272 
          
          
-#Introdução         
+# Introdução         
 Abaixo mostraremos a instalação e configuração do servidor Kerberos e, em seguida, usaremos os kerberos para ativar a autenticação em um cluster do Hadoop.
 Em um cluster de produção real, pode-se ter uma máquina dedicada para hospedar o servidor Kerberos, porém para realizar esse trabalho utilizamos apenas um cluster Hadoop de nó único e instalamos e configuramos o Kerberos na mesma máquina.
 
@@ -19,7 +19,7 @@ Em um cluster de produção real, pode-se ter uma máquina dedicada para hospeda
 Precisa-se do cliente e dos utilitários do Kerberos em todas as máquinas do cluster.
 Para instalá-lo usamos o comando abaixo:
 
-yum install krb5-workstation krb5-libs krb5-auth-dialog
+<style color = 'red'> yum install krb5-workstation krb5-libs krb5-auth-dialog </style>
 
 
 ## 2) Instalar o Kerberos server em apenas uma máquinas:
@@ -89,9 +89,9 @@ Esse comando solicitará uma senha mestre para o datebase.
 O Kerberos criptografa o database usando essa senha mestre. Para restaurar o KDC database de um backup ou reinicie o database, precisa-se dessa senha. Não há problema em digitar a senha no momento do database na restauração. Mas fornecer essa senha em cada reinicialização é um problema. Para evitá-lo, criamos o banco de dados usamos a opção –s no comando citado acima. A opção -s criará um arquivo stash para armazenar a senha. O KDC usará automaticamente a senha do arquivo stash em cada reinicialização. O database do Kerberos mantém identidades. Em seguida, ele atribui tickets para essas identidades. Na terminologia do Kerberos, isso é chamamos de Principal.
 
 A Principal no Kerberos é composto de três componentes. Por exemplo:
-1) Primary
-2) Instance
-3) Realm
+1. Primary
+2. Instance
+3. Realm
 root/admin@HDPCLUSTER.LOCAL
 root@HDPCLUSTER.LOCAL
 
