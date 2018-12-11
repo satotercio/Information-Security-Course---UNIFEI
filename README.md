@@ -109,7 +109,7 @@ root@HDPCLUSTER.LOCAL
 O root é a principal. Admin é a instância, e supõe que  já se conhece o domínio.
 A parte Instance é opcional, mas o root e root / admin são as duas principais diferenças para o Kerberos.
 
-## 5) Fazer o uptate do arquivo ACL e 6) Criar o KDC admin
+## 5) Fazer o uptate do arquivo ACL e Criar o KDC admin
 
 Na linha: 
 ```
@@ -124,7 +124,7 @@ addprinc root/admin@HDPCLUSTER.LOCAL
 ```
 Definimos uma senha e o Kerberos está pronto para ser iniciado e testado.
 
-## 7) Iniciar o Kerberos servive
+## 6) Iniciar o Kerberos servive
 
 Para iniciar o KDC e o servidor admin do Kerberos utilizamos os comandos e  para ter certeza de que eles reiniciarão automaticamente durante uma:
 ```
