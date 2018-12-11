@@ -12,9 +12,9 @@ Equipe:  Tercio Naoki Sato 30697
 Abaixo mostraremos a instalação e configuração do servidor Kerberos e, em seguida, usaremos os kerberos para ativar a autenticação em um cluster do Hadoop.
 Em um cluster de produção real, pode-se ter uma máquina dedicada para hospedar o servidor Kerberos, porém para realizar esse trabalho utilizamos apenas um cluster Hadoop de nó único e instalamos e configuramos o Kerberos na mesma máquina.
 
-#Instalação
+# Instalação
 
-##1) Instalação e configuração do Kerberos:
+## 1) Instalação e configuração do Kerberos:
 
 Precisa-se do cliente e dos utilitários do Kerberos em todas as máquinas do cluster.
 Para instalá-lo usamos o comando abaixo:
@@ -22,7 +22,7 @@ Para instalá-lo usamos o comando abaixo:
 yum install krb5-workstation krb5-libs krb5-auth-dialog
 
 
-##2) Instalar o Kerberos server em apenas uma máquinas:
+## 2) Instalar o Kerberos server em apenas uma máquinas:
 
 Agora cria-se um servidor Kerberos.
 Como estamos realizamos em um cluster de nó único, instalamos o servidor Kerberos na mesma máquina.
@@ -33,7 +33,7 @@ yum install krb5-server
 É necessário que o client já esteja instalado na máquina.
 
 
-##3) Configurar o Kerberos.
+## 3) Configurar o Kerberos.
 
 Existem dois arquivos de configuração:
 
@@ -80,7 +80,7 @@ Portanto, qualquer nome de host sob .unifei) faz parte desse domínio.
 Isso significa, node1.unifei.local, node2.unifei.local ou qualquer outro node com .unifei.local são membros do mesmo domínio. 
 A segunda entrada diz que o domínio unifei.local é o membro do mesmo Realm.
 
-##4) Criar o KDC database para o Realm criado
+## 4) Criar o KDC database para o Realm criado
 Usamos o seguinte comando:
 
 kdb5_util create –r HDPCLUSTER.LOCAL –s
@@ -98,7 +98,7 @@ root@HDPCLUSTER.LOCAL
 O root é a principal. Admin é a instância, e supõe que  já se conhece o domínio.
 A parte Instance é opcional, mas o root e root / admin são as duas principais diferenças para o Kerberos.
 
-##5) Fazer o uptate do arquivo ACL e 6) Criar o KDC admin
+## 5) Fazer o uptate do arquivo ACL e 6) Criar o KDC admin
 
 Na linha: 
 “/admin@HDPCLUSTER.LOCAL”
@@ -111,7 +111,7 @@ addprinc root/admin@HDPCLUSTER.LOCAL
 
 Definimos uma senha e o Kerberos está pronto para ser iniciado e testado.
 
-7) Iniciar o Kerberos servive
+## 7) Iniciar o Kerberos servive
 
 Para iniciar o KDC e o servidor admin do Kerberos utilizamos os comandos e  para ter certeza de que eles reiniciarão automaticamente durante uma:
 
