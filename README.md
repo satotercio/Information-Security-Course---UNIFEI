@@ -93,7 +93,7 @@ A segunda entrada diz que o domínio unifei.local é o membro do mesmo Realm.
 ## 4) Criar o KDC database para o Realm criado
 Usamos o seguinte comando:
 ```
-kdb5_util create –r HDPCLUSTER.LOCAL –s
+kdb5_util create –r HDPUNIFEI.LOCAL –s
 ```
 Esse comando solicitará uma senha mestre para o datebase.
 O Kerberos criptografa o database usando essa senha mestre. Para restaurar o KDC database de um backup ou reinicie o database, precisa-se dessa senha. Não há problema em digitar a senha no momento do database na restauração. Mas fornecer essa senha em cada reinicialização é um problema. Para evitá-lo, criamos o banco de dados usamos a opção –s no comando citado acima. A opção -s criará um arquivo stash para armazenar a senha. O KDC usará automaticamente a senha do arquivo stash em cada reinicialização. O database do Kerberos mantém identidades. Em seguida, ele atribui tickets para essas identidades. Na terminologia do Kerberos, isso é chamamos de Principal.
@@ -103,8 +103,8 @@ A Principal no Kerberos é composto de três componentes. Por exemplo:
 2. Instance
 3. Realm
 ```
-root/admin@HDPCLUSTER.LOCAL
-root@HDPCLUSTER.LOCAL
+root/admin@HDPUNIFEI.LOCAL
+root@HDPUNIFEI.LOCAL
 ```
 O root é a principal. Admin é a instância, e supõe que  já se conhece o domínio.
 A parte Instance é opcional, mas o root e root / admin são as duas principais diferenças para o Kerberos.
@@ -113,14 +113,14 @@ A parte Instance é opcional, mas o root e root / admin são as duas principais 
 
 Na linha: 
 ```
-“/admin@HDPCLUSTER.LOCAL”
+“/admin@HDPUNIFEI.LOCAL”
 ```
 Nós apenas mudamos o nome do REALM. Esta linha diz que qualquer usuário com uma instância Admin deve ter todos os tipos de acesso.
 Em seguida criamos um administrador para o KDC. Nós usamos o utilitário "kadmin.local". Essa ferramenta funciona somente no servidor KDC e não pode executá-lo em máquinas clientes.
 
 Feito isso,  tem-se um prompt do kadmin. E adicionamos um principal com uma instância do administrador pelo comando abaixo:
 ```
-addprinc root/admin@HDPCLUSTER.LOCAL
+addprinc root/admin@HDPUNIFEI.LOCAL
 ```
 Definimos uma senha e o Kerberos está pronto para ser iniciado e testado.
 
