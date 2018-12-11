@@ -71,7 +71,7 @@ A próxima configuração é muito crítica. Especificamos o local do servidor K
 ```
 “kdc = kerberos.example.com”.
 ```
-Então, criamos uma entrada para meu domínio e substituimos esses valores pelo nome do host do meu servidor KDC:
+Então, criamos uma entrada para o domínio e substituimos esses valores pelo nome do host do meu servidor KDC:
 ```
 [realms]
 
