@@ -4,9 +4,12 @@ Trabalho de Tópicos Especiais em Segurança da Informação - ECOE010 - da Univ
 Curso: Engenharia de Computação.  
 Período: 2º Semestre de 2018   
 Equipe: 
-       * Tercio Naoki Sato 30697 
-       * Gabriel Pedro Krupa 27845
-       * Felipe Silva de Paula 35272 
+
+        Tercio Naoki Sato 30697
+       
+        Gabriel Pedro Krupa 27845
+       
+        Felipe Silva de Paula 35272 
          
          
 # Introdução         
