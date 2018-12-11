@@ -143,7 +143,7 @@ Caso queira criar mais alguns Principais, pode-se usar o comando kadmin.
 Anteriormente foi usado o utilitário local kadmin. Mas desde que começou-se o servidor admin Kerberos, agora podemos usar a ferramenta kadmin padrão.
 
 Se entrar com a senha. Estará no prompt do kadmin. O comando para criar um principal é o mesmo que foi usado anteriormente, addprinc.
-E caso queria remover os kitckets criados, usa-se o comando kdestroy.
+E caso queira remover os tickets criados, usa-se o comando kdestroy.
 
 
 # Simulação
