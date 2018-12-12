@@ -15,7 +15,9 @@ Equipe:
 # Programas        
 * Oracle Virtual Box 5.2
 * CentOS 7
-* Cliente, Servidor e KDC Kerberos
+* Cliente, Servidor-KDC Kerberos
+
+Objetivo: Instalação e configuração do Servidor-KDC Kerberos que seria testado por um Cliente na obtenção de um ticket.
 
 # Instalação
 
@@ -67,7 +69,7 @@ Pelos comandos abaixo, abrimos o outro arquivo de configuração e definimos mai
 vi /var/kerberos/krb5kdc/kdc.conf
 vi /etc/krb5.conf
 ```
-Muda-se o nome do domínio padrão e fazemos o nosso domínio como padrão pelo nome “UNIFEI.LOCAL”.
+Muda-se o nome do domínio padrão e fazemos o nosso domínio como padrão pelo nome “LOCALHOST”.
 A próxima configuração é muito crítica. Especificamos o local do servidor Kerberos que o domínio estará usando, alterando a linha 
 ```
 “kdc = kerberos.example.com”.
@@ -82,7 +84,7 @@ LOCALHOST = {
 }
 ```
 Para o segundo, traduzimos um nome de host para um nome de domínio. Essa entrada diz quais máquinas fazem parte desse domínio.
-Portanto, qualquer nome de host sob .unifei) faz parte desse domínio.
+Portanto, qualquer nome de host sob .localhost) faz parte desse domínio.
 ```
 [domin_realm]
    . localhost = LOCALHOST
@@ -131,7 +133,7 @@ Definimos uma senha e o Kerberos está pronto para ser iniciado e testado.
 Para iniciar o KDC e o servidor admin do Kerberos, utilizamos os comandos para ter certeza de que eles reiniciarão automaticamente, mostrado abaixo:
 ```
 service krb5kdc start
-servisse kadmin start
+service kadmin start
 chkconfig krb5kdc on
 chkconfig kadmin on
 ```
