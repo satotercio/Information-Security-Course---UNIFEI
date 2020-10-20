@@ -11,7 +11,7 @@ Equipe:
        
         Felipe Silva de Paula 35272 
 
-Crédito: https://www.youtube.com/watch?v=-pBh7fgV6w4      
+Credits for *Hadoop Tutorials Kerberos Authentication -* [*Part 1*](https://www.youtube.com/watch?v=T8a2QgmWyVU) *and* [*Part 2*](https://www.youtube.com/watch?v=-pBh7fgV6w4)      
          
 # Programas        
 * Oracle Virtual Box 5.2
