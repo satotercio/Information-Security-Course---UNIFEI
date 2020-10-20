@@ -10,7 +10,8 @@ Equipe:
         Gabriel Pedro Krupa 27845
        
         Felipe Silva de Paula 35272 
-         
+
+Crédito: https://www.youtube.com/watch?v=-pBh7fgV6w4      
          
 # Programas        
 * Oracle Virtual Box 5.2
